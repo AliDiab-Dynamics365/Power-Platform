@@ -5,9 +5,16 @@
       "args": [
         "-y",
         "@playwright/mcp@latest",
+        "--browser",
+        "chromium",
+        "--executable-path",
+        "/opt/pw-browsers/chromium",
         "--user-data-dir",
         "${HOME}/.cache/claude-playwright-power-platform"
-      ]
+      ],
+      "env": {
+        "NODE_EXTRA_CA_CERTS": "/root/.ccr/ca-bundle.crt"
+      }
     }
   }
 }
